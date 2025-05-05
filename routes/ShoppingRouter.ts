@@ -2,7 +2,9 @@ import express, { Request, Response, NextFunction } from 'express';
 import { GetFoodAvailablity, GetFoodIn30Min, GetTopRestaurents, RestaurentById, SearchFoods } from '../controller';
 
 const router = express.Router();
-
+router.get("/", (req: Request, res: Response, next: NextFunction) => {
+    res.send("Hello Food Bro ");
+})
 router.get("/:pincode", GetFoodAvailablity);
 router.get("/top-restaurents/:pincode", GetTopRestaurents);
 router.get("/food-in-30-min/:pincode", GetFoodIn30Min);

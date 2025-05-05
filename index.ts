@@ -1,4 +1,5 @@
 import express from 'express';
+import "reflect-metadata";
 import dbConnection from './services/Database';
 import App from './services/ExpressApp';
 const app = express();
