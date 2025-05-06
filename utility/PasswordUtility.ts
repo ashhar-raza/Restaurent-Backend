@@ -16,7 +16,7 @@ export const ComparePassword = async (password: string, userPassword: string) =>
     return bcrypt.compare(password, userPassword);
 }
 
-export const GenerateToken = async (data: VendorTokenPayload) => {
+export const GenerateToken = async (data: AuthTypePayload) => {
     return jsonwebtoken.sign(data, SECRET_KEY, { expiresIn: '1d' });
 }
 
